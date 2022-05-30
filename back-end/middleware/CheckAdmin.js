@@ -1,6 +1,4 @@
 
-const jwt = require('jsonwebtoken');
-
 const CheckAdmin = (req, res, next) => {
     if (!req.headers.authorization) res.status(401).json({ status: 'error', message: 'Request không có Access Token Admin' });
     else {

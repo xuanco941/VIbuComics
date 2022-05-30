@@ -1,13 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const Authentication = require('../controller/Authentication');
+const Admin = require('../controller/Admin');
 
-router.post('/signin' , Authentication.SignIn);
-
-router.post('/signup' , Authentication.SignUp);
-
-router.post('/refresh-token' , Authentication.RefreshToken)
-
+router.post('/signin' , Admin.SignIn);
 
 module.exports = router;
